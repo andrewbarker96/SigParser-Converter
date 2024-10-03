@@ -14,7 +14,7 @@ class ContactConverter:
 
         # Creating Supabase Client
         self.supabase_url: str = os.getenv('SUPABASE_URL')
-        self.supabase_key: str = os.getenv('SUPABASE_KEY')
+        self.supabase_key: str = os.getenv('SUPABASE_PRIVATE_KEY')
         self.supabase: Client = create_client(self.supabase_url, self.supabase_key)
 
     # Format Phone Numbers to be +1XXXXXXXXXX
