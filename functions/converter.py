@@ -119,11 +119,11 @@ if os.path.exists(json_file):
     previous_data = pd.read_json(json_file)
     
     if not filtered_data.equals(previous_data):
-        print("Changes Detected. Updating filtered_contacts.json")
+        print("Changes Detected. Updating StockContacts.json")
         filtered_data.to_json(json_file, orient='records', indent=2)
         print(filtered_data)
     else:
-        print("No Changes Detected. filtered_contacts.json is up to date")
+        print("No Changes Detected. StockContacts.json is up to date")
 else:
-    print("filtered_contacts.json does not exist. Creating filtered_contacts.json")
+    print("StockContacts.json does not exist. Creating StockContacts.json")
     filtered_data.to_json(json_file, orient='records', indent=2)
