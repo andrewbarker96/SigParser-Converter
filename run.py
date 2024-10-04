@@ -48,7 +48,8 @@ class ContactConverter:
             return False
 
         # Filter out invalid contacts
-        data = data[data['Contact Status'] == 'Valid']
+        data = data[data['Interaction Status'] != 'untouched']
+        data = data[data['Contact Status'] != 'ignore']
 
         phone_columns = ['Home Phone', 'Office Phone', 'Direct Phone', 'Mobile Phone', 'Fax Phone']
         for col in phone_columns:
