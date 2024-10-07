@@ -6,15 +6,15 @@ import json
 from dotenv import load_dotenv
 from supabase import create_client, Client
 
+load_dotenv()
 class ContactConverter:
     def __init__(self, csv_file: str, json_file: str):
         self.csv_file = csv_file
         self.json_file = json_file
-        load_dotenv()
 
         # Creating Supabase Client
         self.supabase_url: str = os.getenv('SUPABASE_URL')
-        self.supabase_key: str = os.getenv('SUPABASE_PRIVATE_KEY')
+        self.supabase_key: str = os.getenv('SUPABASE_KEY')
         self.supabase: Client = create_client(self.supabase_url, self.supabase_key)
 
     # Format Phone Numbers to be +1XXXXXXXXXX

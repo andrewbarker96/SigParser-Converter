@@ -11,6 +11,7 @@ ctk.set_appearance_mode("light")
 ctk.set_widget_scaling(1.25)
 ctk.set_window_scaling(1.5)
 
+
 class Popover(ctk.CTkToplevel):
     def __init__(self, master, **kwags):
         super().__init__(master, **kwags)
