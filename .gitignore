@@ -1,7 +1,7 @@
 *.csv
 *.json
-*.venv
 *.env
 *.__pycache__
 
-
+/.venv
+/output
