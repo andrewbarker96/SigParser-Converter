@@ -63,9 +63,10 @@ class ContactConverter:
             "First Name": "firstName",
             "Last Name": "lastName",
             "Name Suffix": "suffix",
-            "Company Name": "company",
+            "Company Name": "company",            
             "Job Title": "title",
             "Email Address": "email",
+            "Full Address": "address",
             "Home Phone": "homePhone",
             "Office Phone": "officePhone",
             "Direct Phone": "directPhone",
@@ -75,7 +76,7 @@ class ContactConverter:
             "Interaction Status": "interactionStatus",
         }, inplace=True)
 
-        filtered_columns = ['uid', 'prefix', 'firstName', 'lastName', 'suffix', 'title', 'company', 'email', 
+        filtered_columns = ['uid', 'prefix', 'firstName', 'lastName', 'suffix', 'title', 'company', 'email', 'address', 
                             'homePhone', 'officePhone', 'directPhone', 'mobilePhone', 'fax']
         filtered_data = data[filtered_columns]
         filtered_data = filtered_data.fillna('')
