@@ -198,7 +198,7 @@ class ContactConverter:
         for i in range(0, len(updates), batch_size):
             batch_data = updates[i:i + batch_size]
             try:
-                self.supabase.table('contacts').upsert(batch_data).execute()
+                self.supabase.table('stock_contacts').upsert(batch_data).execute()
             except Exception as e:
                 print(f"Error: Unable to update records. {e}")
                 return False
@@ -206,7 +206,7 @@ class ContactConverter:
         for i in range(0, len(new_records), batch_size):
             batch_data = new_records[i:i + batch_size]
             try:
-                self.supabase.table('contacts').insert(batch_data).execute()
+                self.supabase.table('stock_contacts').insert(batch_data).execute()
                 print(f"Inserted {len(batch_data)} records")
             except Exception as e:
                 print(f"Error: Unable to insert records. {e}")
